@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishabh Kumar | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
 <body>
 
-    <canvas id="sky-canvas"></canvas>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="noise-overlay"></div>
 
     <nav>
         <div class="nav-content">
@@ -34,12 +30,12 @@
         </header>
 
         <section class="about-section fade-in" id="about">
-            <div class="card about-card">
+            <div class="card about-card glass">
                 <div class="card-content">
                     <h2 class="section-title">About Me</h2>
                     <div class="about-text">
                         <p>
-                            Hi, I'm <strong>Rishabh Kumar</strong>. I am a final-year BCA student and a tech-entrepreneur with a strong foundation in both software engineering and business development. As a founder at RedFox Creation, I discovered my passion for operating at the intersection of innovative technology and strategic market growth.
+                            Hi, I'm <strong>Rishabh Kumar Choudhary</strong>. I am a final-year BCA student and a tech-entrepreneur with a strong foundation in both software engineering and business development. As a founder at RedFox Creation, I discovered my passion for operating at the intersection of innovative technology and strategic market growth.
                         </p>
                         <p>
                             Whether I am architecting full-stack applications with Django, integrating AI models like the Gemini API, or executing B2B lead generation campaigns, my goal remains the same: building robust, ROI-driven solutions that solve real-world problems.
@@ -50,25 +46,25 @@
         </section>
 
         <section class="bento-grid fade-in">
-            <div class="card bento-large">
+            <div class="card bento-large glass">
                 <div class="card-content">
-                    <i class="icon">✨</i>
+                    <div class="icon-wrap">✨</div>
                     <h3>Tech Stack</h3>
                     <p>Building robust applications using <strong>Python, Django, PHP, and MySQL</strong>. I specialize in integrating emerging tech like <strong>Hugging Face Transformers and the Gemini API</strong>.</p>
                 </div>
             </div>
 
-            <div class="card bento-small delay-1">
+            <div class="card bento-small glass delay-1">
                 <div class="card-content">
-                    <i class="icon">📈</i>
+                    <div class="icon-wrap">📈</div>
                     <h3>Strategy</h3>
                     <p>ROI-driven Lead Generation, B2B Cold Outreach, and SEO.</p>
                 </div>
             </div>
 
-            <div class="card bento-small delay-2">
+            <div class="card bento-small glass delay-2">
                 <div class="card-content">
-                    <i class="icon">🔌</i>
+                    <div class="icon-wrap">🔌</div>
                     <h3>Hardware</h3>
                     <p>IoT architecture with Arduino, BLE, and MQTT protocols.</p>
                 </div>
@@ -79,7 +75,7 @@
             <h2 class="section-title fade-in">Selected Projects</h2>
             
             <div class="project-list">
-                <div class="card project-card fade-in">
+                <div class="card project-card glass fade-in">
                     <div class="card-content">
                         <div class="project-header">
                             <h3>AI-Powered PDF Summarizer</h3>
@@ -89,7 +85,7 @@
                     </div>
                 </div>
 
-                <div class="card project-card fade-in delay-1">
+                <div class="card project-card glass fade-in delay-1">
                     <div class="card-content">
                         <div class="project-header">
                             <h3>RedFox Creation Hub</h3>
@@ -102,7 +98,7 @@
         </section>
 
         <section class="contact fade-in" id="contact">
-            <div class="contact-box">
+            <div class="contact-box glass">
                 <h2>Let's build something together.</h2>
                 <p>Feel free to reach out for collaborations, tech discussions, or business opportunities.</p>
                 
@@ -129,9 +125,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Rishabh Kumar. Built with precision.</p>
+        <p>&copy; 2026 Rishabh Kumar Built with precision.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
