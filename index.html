@@ -3,61 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishabh | Personal Portfolio</title>
+    <title>Rishabh | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">Rishabh.</div>
+        <div class="logo">R.</div>
         <ul class="nav-links">
-            <li><a href="#about">About Me</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects Built</a></li>
+            <li><a href="#projects">Work</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="about" class="section">
+    <section id="about" class="section hero">
         <div class="container">
-            <h1>Hi, I'm Rishabh</h1>
-            <h2>Final-Year BCA Student & Business Development Professional</h2>
-            <p>
-                I am a final-year Bachelor of Computer Applications (BCA) student with a unique blend of technical expertise and business acumen. As a founder at RedFox Creation and an experienced business development professional, I specialize in bridging the gap between innovative technology and strategic market growth. I am passionate about full-stack web development, emerging AI technologies, and crafting ROI-driven digital strategies.
+            <p class="subtitle animate-on-load staggered-1">Hi, I am</p>
+            <h1 class="animate-on-load staggered-2">Rishabh.</h1>
+            <h2 class="animate-on-load staggered-3">BCA Student & Business Developer.</h2>
+            <p class="hero-desc animate-on-load staggered-4">
+                I bridge the gap between innovative technology and strategic market growth. As a founder and professional, I specialize in full-stack web development, emerging AI technologies, and crafting ROI-driven digital strategies.
             </p>
         </div>
     </section>
 
     <section id="skills" class="section bg-light">
         <div class="container">
-            <h2>My Skills</h2>
+            <h2 class="section-title reveal-up">Expertise</h2>
             <div class="skills-grid">
-                <div class="skill-category">
+                <div class="skill-category reveal-up delay-1">
                     <h3>Web Development</h3>
-                    <ul>
-                        <li>Python & Django (MVT Architecture)</li>
-                        <li>PHP & MySQL</li>
-                        <li>AngularJS</li>
-                        <li>HTML, CSS, JavaScript</li>
-                    </ul>
+                    <p>Python, Django (MVT), PHP, MySQL, AngularJS, HTML, CSS, JavaScript</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Digital Marketing & Strategy</h3>
-                    <ul>
-                        <li>ROI-driven Lead Generation</li>
-                        <li>SEO & Paid Advertisements</li>
-                        <li>B2B Cold Outreach (LinkedIn)</li>
-                        <li>Influencer Marketing</li>
-                    </ul>
+                <div class="skill-category reveal-up delay-2">
+                    <h3>Digital Strategy</h3>
+                    <p>ROI-driven Lead Generation, SEO, B2B Cold Outreach, Influencer Marketing</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Emerging Tech & Tools</h3>
-                    <ul>
-                        <li>Hugging Face Transformers</li>
-                        <li>Gemini API Integration</li>
-                        <li>IoT (Arduino, BLE, MQTT, 6LoWPAN)</li>
-                        <li>Financial Modeling</li>
-                    </ul>
+                <div class="skill-category reveal-up delay-3">
+                    <h3>Emerging Tech</h3>
+                    <p>Hugging Face, Gemini API, IoT (Arduino, BLE, MQTT), Financial Modeling</p>
                 </div>
             </div>
         </div>
@@ -65,37 +51,45 @@
 
     <section id="projects" class="section">
         <div class="container">
-            <h2>Projects Built</h2>
+            <h2 class="section-title reveal-up">Selected Works</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>AI-Powered PDF Summarizer</h3>
-                    <p class="tech-stack"><strong>Tech Stack:</strong> Django, Hugging Face Transformers, Gemini API</p>
-                    <p>My final-year capstone project. A comprehensive web application built on the Django framework that leverages advanced AI models to instantly extract, process, and summarize large PDF documents for quick consumption.</p>
+                <div class="project-card reveal-up delay-1">
+                    <div class="card-content">
+                        <span class="tech-stack">Django / AI / Gemini API</span>
+                        <h3>AI-Powered PDF Summarizer</h3>
+                        <p>A web application leveraging advanced AI models to instantly extract, process, and summarize large PDF documents for quick consumption.</p>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>RedFox Creation Initiatives</h3>
-                    <p class="tech-stack"><strong>Focus:</strong> Business Development & Digital Strategy</p>
-                    <p>Spearheaded business development and digital marketing initiatives as a founder/manager. Directed lead generation campaigns, negotiated with tech executives, and developed strategic proposals to drive ROI.</p>
+                <div class="project-card reveal-up delay-2">
+                    <div class="card-content">
+                        <span class="tech-stack">Business Strategy / Marketing</span>
+                        <h3>RedFox Creation</h3>
+                        <p>Spearheaded business development and digital marketing initiatives. Directed lead generation campaigns and negotiated with tech executives.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section bg-light">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p>Currently transitioning into a new role, but always open to discussing technology, business development, or Indian Constitutional Law.</p>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+    <section id="contact" class="section bg-dark">
+        <div class="container text-center">
+            <h2 class="section-title reveal-up text-white">Let's Connect</h2>
+            <p class="reveal-up delay-1 text-gray">Always open to discussing technology, business development, or new opportunities.</p>
+            
+            <div class="contact-info reveal-up delay-2">
+                <a href="mailto:kumar1223rishabhss@gmail.com" class="contact-link">kumar1223rishabhss@gmail.com</a>
+                <a href="tel:+917782077760" class="contact-link">+91 7782077760</a>
+            </div>
+
+            <div class="social-links reveal-up delay-3">
+                <a href="https://github.com/12rishabh23" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/rishabh-kumar-choudhary-074696289/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Rishabh. All rights reserved.</p>
+        <p>&copy; 2026 Rishabh. Crafted with minimal intent.</p>
     </footer>
 
     <script src="script.js"></script>
