@@ -165,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault(); 
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
             alert(`Thanks for reaching out, ${name}! Your message has been simulated. Link this form to an endpoint to receive actual emails.`);
             this.reset(); 
         });
