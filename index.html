@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishabh Kumar | 3D Portfolio</title>
+    <title>Rishabh Kumar | Innovator</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <canvas id="bg-stars"></canvas>
+    <canvas id="particle-canvas"></canvas>
 
     <nav>
         <div class="nav-content">
-            <div class="logo">Rishabh<span></span></div>
+            <div class="logo">Rishabh<span class="dot">.</span></div>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#work">Work</a>
@@ -27,93 +24,114 @@
 
     <main class="container">
         <header class="hero slide-up">
-            <h1>Hi, I'm <span class="accent-text">Rishabh Kumar</span></h1>
-            <p>I develop 3D visuals, user interfaces, and robust web applications.</p>
+            <div class="glow-orb"></div>
+            <div class="badge">🚀 Available for new opportunities</div>
+            <h1>Hi, I'm Rishabh Kumar <br> <span class="gradient-text">Developer & Strategist</span></h1>
+            <p>Blending innovative AI technology with ROI-driven digital strategies to build products that redefine the future.</p>
             <div class="hero-actions">
                 <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#work" class="btn btn-secondary">Explore Work</a>
             </div>
         </header>
 
         <section class="about-section fade-in" id="about">
-            <p class="sub-heading">Introduction</p>
-            <h2 class="section-title">Overview.</h2>
-            <div class="about-text">
-                <p>
-                    I'm a skilled software developer and BCA student with experience in Python, Django, and JavaScript, and expertise in emerging tech like the Gemini API. I am a quick learner and collaborate closely to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
-                </p>
+            <div class="card glass tilt-card">
+                <div class="card-content">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-text">
+                        <p>
+                            Hi, I'm <strong>Rishabh Kumar Choudhary</strong>. I am a final-year BCA student and a tech-entrepreneur with a strong foundation in both software engineering and business development. As a founder at RedFox Creation, I discovered my passion for operating at the intersection of innovative technology and strategic market growth.
+                        </p>
+                        <p>
+                            Whether I am architecting full-stack applications with Django, integrating AI models like the Gemini API, or executing B2B lead generation campaigns, my goal remains the same: building robust, ROI-driven solutions that solve real-world problems.
+                        </p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="bento-grid">
-                <div class="card glass">
-                    <div class="icon-wrap">💻</div>
-                    <h3>Web Developer</h3>
+        </section>
+
+        <section class="bento-grid fade-in">
+            <div class="card glass bento-large tilt-card">
+                <div class="card-content">
+                    <div class="icon-wrap">✨</div>
+                    <h3>Tech Stack Architecture</h3>
+                    <p>Building robust applications using <strong>Python, Django, PHP, and MySQL</strong>. I specialize in integrating emerging tech like <strong>Hugging Face Transformers and the Gemini API</strong>.</p>
                 </div>
-                <div class="card glass delay-1">
+            </div>
+
+            <div class="card glass bento-small tilt-card delay-1">
+                <div class="card-content">
                     <div class="icon-wrap">📈</div>
-                    <h3>Digital Strategist</h3>
+                    <h3>Digital Strategy</h3>
+                    <p>ROI-driven Lead Generation, B2B Cold Outreach, and advanced SEO targeting.</p>
                 </div>
-                <div class="card glass delay-2">
-                    <div class="icon-wrap">🤖</div>
-                    <h3>AI & IoT Enthusiast</h3>
+            </div>
+
+            <div class="card glass bento-small tilt-card delay-2">
+                <div class="card-content">
+                    <div class="icon-wrap">🔌</div>
+                    <h3>IoT & Hardware</h3>
+                    <p>IoT architecture bridging the physical and digital with Arduino, BLE, and MQTT protocols.</p>
                 </div>
             </div>
         </section>
 
         <section class="projects" id="work">
-            <p class="sub-heading">My Work</p>
-            <h2 class="section-title">Projects.</h2>
+            <h2 class="section-title fade-in">Selected Masterpieces</h2>
             
             <div class="project-list">
-                <div class="card project-card glass fade-in">
+                <div class="card glass project-card tilt-card fade-in">
                     <div class="card-content">
-                        <h3>AI-Powered PDF Summarizer</h3>
+                        <div class="project-header">
+                            <h3>AI-Powered PDF Summarizer</h3>
+                            <span class="tag">Django • Gemini API</span>
+                        </div>
                         <p>A comprehensive web application that leverages advanced AI models to instantly extract, process, and summarize large PDF documents for quick consumption.</p>
-                        <span class="tag">#django</span>
-                        <span class="tag">#ai</span>
                     </div>
                 </div>
 
-                <div class="card project-card glass fade-in delay-1">
+                <div class="card glass project-card tilt-card fade-in delay-1">
                     <div class="card-content">
-                        <h3>RedFox Creation Hub</h3>
+                        <div class="project-header">
+                            <h3>RedFox Creation Hub</h3>
+                            <span class="tag">Digital Strategy • Lead Gen</span>
+                        </div>
                         <p>Spearheaded business development initiatives as a founder. Directed lead generation campaigns, negotiated with tech executives, and developed strategic proposals.</p>
-                        <span class="tag">#strategy</span>
-                        <span class="tag">#business</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="contact fade-in" id="contact">
-            <div class="contact-wrapper">
+            <div class="contact-box glass tilt-card">
+                <h2>Let's build something epic.</h2>
+                <p>Feel free to reach out for collaborations, tech discussions, or business opportunities.</p>
                 
-                <div class="contact-form-container glass">
-                    <p class="sub-heading">Get in touch</p>
-                    <h2>Contact.</h2>
-                    
-                    <form class="contact-form">
-                        <label>
-                            <span>Your Name</span>
-                            <input type="text" placeholder="What's your name?" required>
-                        </label>
-                        <label>
-                            <span>Your Email</span>
-                            <input type="email" placeholder="What's your email?" required>
-                        </label>
-                        <label>
-                            <span>Your Message</span>
-                            <textarea rows="7" placeholder="What do you want to say?" required></textarea>
-                        </label>
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </form>
+                <div class="contact-grid">
+                    <a href="mailto:kumar1223rishabhss@gmail.com" class="contact-item">
+                        <span class="label">Email</span>
+                        <span class="value">kumar1223rishabhss@gmail.com</span>
+                    </a>
+                    <a href="tel:+917782077760" class="contact-item">
+                        <span class="label">Phone</span>
+                        <span class="value">+91 7782077760</span>
+                    </a>
+                    <a href="https://github.com/12rishabh23" target="_blank" class="contact-item">
+                        <span class="label">GitHub</span>
+                        <span class="value">github.com/12rishabh23 ↗</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rishabh-kumar-choudhary-074696289/" target="_blank" class="contact-item">
+                        <span class="label">LinkedIn</span>
+                        <span class="value">Rishabh Kumar Choudhary ↗</span>
+                    </a>
                 </div>
-
-                <div class="contact-globe-container" id="globe-container">
-                    </div>
-
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Rishabh Kumar Architected for the future.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
