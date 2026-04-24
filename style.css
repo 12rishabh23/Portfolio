@@ -3,7 +3,6 @@
     --text-primary: #ffffff;
     --text-secondary: #94a3b8;
     
-    /* Cyber/Neon Palette */
     --neon-cyan: #00f2fe;
     --neon-blue: #4facfe;
     
@@ -22,13 +21,9 @@
     scroll-behavior: smooth;
 }
 
-/* --- The Canvas Background --- */
 #bg-canvas {
     position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 100vw; 
-    height: 100vh;
+    top: 0; left: 0; width: 100vw; height: 100vh;
     z-index: -1;
     background: radial-gradient(circle at center, #0a0a12 0%, #030305 100%);
     pointer-events: none; 
@@ -43,15 +38,8 @@ html, body {
 
 a { text-decoration: none; color: inherit; }
 
-.container {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 10;
-}
+.container { max-width: 1050px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 10; }
 
-/* --- Navigation --- */
 nav {
     position: fixed; top: 0; width: 100%;
     backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
@@ -59,79 +47,38 @@ nav {
     border-bottom: 1px solid var(--border-color);
     z-index: 100;
 }
-
-.nav-content {
-    max-width: 1050px; margin: 0 auto; padding: 20px;
-    display: flex; justify-content: space-between; align-items: center;
-}
-
+.nav-content { max-width: 1050px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
 .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; color: var(--accent); }
 .logo .dot { color: var(--neon-cyan); }
-
 .nav-links { display: flex; gap: 30px; font-size: 1rem; font-weight: 400; color: var(--text-secondary); }
 .nav-links a:hover { color: var(--neon-cyan); transition: color 0.3s ease; text-shadow: 0 0 10px rgba(0,242,254,0.5); }
 
-/* --- Hero Section --- */
 .hero { padding: 200px 0 120px; text-align: center; position: relative; }
-
-.glow-orb {
-    position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
-    width: 400px; height: 400px; background: var(--neon-blue);
-    filter: blur(150px); opacity: 0.15; z-index: -1; pointer-events: none;
-}
-
-.badge {
-    display: inline-block; padding: 8px 20px;
-    background: rgba(0, 242, 254, 0.05); color: var(--neon-cyan);
-    border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 100px;
-    font-size: 0.9rem; font-weight: 600; margin-bottom: 30px;
-    box-shadow: 0 0 20px rgba(0,242,254,0.1);
-}
-
-.hero h1 {
-    font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 800; line-height: 1.1;
-    letter-spacing: -2px; margin-bottom: 25px;
-}
-
-.gradient-text {
-    background: linear-gradient(270deg, #00f2fe, #4facfe, #00f2fe);
-    background-size: 200% auto;
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    animation: shine 4s linear infinite;
-}
-
+.glow-orb { position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: var(--neon-blue); filter: blur(150px); opacity: 0.15; z-index: -1; pointer-events: none; }
+.badge { display: inline-block; padding: 8px 20px; background: rgba(0, 242, 254, 0.05); color: var(--neon-cyan); border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 100px; font-size: 0.9rem; font-weight: 600; margin-bottom: 30px; box-shadow: 0 0 20px rgba(0,242,254,0.1); }
+.hero h1 { font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -2px; margin-bottom: 25px; }
+.gradient-text { background: linear-gradient(270deg, #00f2fe, #4facfe, #00f2fe); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shine 4s linear infinite; }
 @keyframes shine { to { background-position: 200% center; } }
-
 .hero p { color: var(--text-secondary); font-size: 1.2rem; max-width: 650px; margin: 0 auto 40px; font-weight: 300; }
 
-/* --- Glassmorphism & 3D Tilt Cards --- */
 .glass {
     background: var(--glass-bg);
     backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--border-color); border-radius: 24px;
     box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
-    position: relative; /* CRITICAL for the glow effect */
-    overflow: hidden;   /* CRITICAL for the glow effect */
+    position: relative; overflow: hidden;
 }
 
-.tilt-card {
-    transition: transform 0.1s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    transform-style: preserve-3d;
-}
-
-/* The actual glowing highlight inside the card */
+.tilt-card { transform-style: preserve-3d; }
 .tilt-card::before {
     content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
     background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(0, 242, 254, 0.1), transparent 40%);
     opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 0;
 }
-
 .tilt-card:hover::before { opacity: 1; }
-
 .tilt-card:hover { border-color: rgba(255, 255, 255, 0.2); box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 40px var(--glass-glow); z-index: 10; }
 .card-content { position: relative; z-index: 2; padding: 40px; transform: translateZ(30px); }
 
-/* --- Sections & Grid --- */
 .section-title { font-size: 2.5rem; margin-bottom: 40px; font-weight: 800; letter-spacing: -1px; }
 
 /* About Me */
@@ -143,22 +90,14 @@ nav {
 .about-text p { color: var(--text-secondary); font-size: 1.15rem; margin-bottom: 20px; font-weight: 300; }
 .about-text strong { color: var(--neon-cyan); font-weight: 600; }
 
-/* --- Experience & Education Timeline --- */
+/* Timeline */
 .timeline-section { margin-bottom: 120px; }
 .timeline-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
 .column-title { font-size: 1.8rem; margin-bottom: 30px; color: #fff; font-weight: 600; letter-spacing: -0.5px; }
-
 .timeline { display: flex; flex-direction: column; gap: 30px; position: relative; border-left: 2px solid var(--glass-border); margin-left: 15px; padding-left: 35px; }
-
-/* Timeline specific card adjustments */
 .timeline-item { padding: 30px; border-radius: 16px; border: 1px solid var(--border-color); }
-.timeline-item .card-content { padding: 0; transform: none; } /* Reset padding since parent has it */
-
-.timeline-item::before { 
-    content: ''; position: absolute; left: -48px; top: 35px; width: 24px; height: 24px; 
-    border-radius: 50%; background: var(--bg-main); border: 4px solid var(--neon-cyan); 
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); z-index: 3;
-}
+.timeline-item .card-content { padding: 0; transform: none; } 
+.timeline-item::before { content: ''; position: absolute; left: -48px; top: 35px; width: 24px; height: 24px; border-radius: 50%; background: var(--bg-main); border: 4px solid var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); z-index: 3; }
 .timeline-date { color: var(--neon-cyan); font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; font-size: 0.9rem; text-transform: uppercase; }
 .timeline-content h3 { font-size: 1.4rem; color: #fff; margin-bottom: 5px; font-weight: 600; }
 .timeline-content h4 { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 15px; font-weight: 400; }
@@ -181,27 +120,18 @@ nav {
 .tag { background: rgba(255,255,255,0.1); color: #fff; padding: 8px 16px; border-radius: 100px; font-size: 0.85rem; font-weight: 600; border: 1px solid var(--border-color); }
 .project-card p { color: var(--text-secondary); max-width: 85%; font-size: 1.1rem; font-weight: 300; }
 
-/* Centered Contact Form */
+/* Contact Form */
 .contact-area { margin-bottom: 120px; padding-top: 50px; }
 .contact-layout { display: flex; justify-content: center; }
 .contact-form-card { width: 100%; max-width: 700px; padding: 40px; position: relative; overflow: hidden; }
-
 .sub-heading { font-size: 1.1rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; font-weight: 600; }
 .main-heading { font-size: 3.5rem; font-weight: 800; margin-bottom: 30px; color: #fff; letter-spacing: -1px; }
-
 .contact-form { display: flex; flex-direction: column; gap: 25px; }
 .form-label { display: flex; flex-direction: column; gap: 10px; }
 .label-text { font-weight: 600; color: #fff; font-size: 1rem; }
-
-.form-input {
-    background-color: rgba(0, 0, 0, 0.6); 
-    border: 1px solid var(--glass-border); border-radius: 12px;
-    padding: 16px 20px; color: #fff; font-size: 1rem; outline: none;
-    transition: all 0.3s ease; font-family: inherit; resize: vertical;
-}
+.form-input { background-color: rgba(0, 0, 0, 0.6); border: 1px solid var(--glass-border); border-radius: 12px; padding: 16px 20px; color: #fff; font-size: 1rem; outline: none; transition: all 0.3s ease; font-family: inherit; resize: vertical; }
 .form-input::placeholder { color: var(--text-secondary); }
 .form-input:focus { border-color: var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 242, 254, 0.15); }
-
 .submit-btn { align-self: flex-start; padding: 14px 40px; font-size: 1.1rem; margin-top: 10px; border-radius: 12px; font-weight: 600; cursor: pointer; border: none; background: linear-gradient(45deg, var(--neon-blue), var(--neon-cyan)); color: #000; box-shadow: 0 10px 25px rgba(0, 242, 254, 0.3); transition: all 0.3s; }
 .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(0, 242, 254, 0.5); }
 
@@ -222,7 +152,6 @@ footer { text-align: center; padding: 40px; color: var(--text-secondary); font-s
     .project-card p { max-width: 100%; }
     .tilt-card { transform: none !important; }
     .about-card .card-content { flex-direction: column; text-align: center; gap: 30px; }
-    
     .timeline-container { grid-template-columns: 1fr; gap: 60px; }
     .timeline { margin-left: 10px; padding-left: 25px; }
     .timeline-item::before { left: -39px; width: 20px; height: 20px; border-width: 3px; }
