@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         function animate() {
             requestAnimationFrame(animate);
             ctx.clearRect(0,0,innerWidth, innerHeight);
-            
             for (let i = 0; i < particlesArray.length; i++) {
                 particlesArray[i].update();
             }
@@ -122,36 +121,38 @@ document.addEventListener('DOMContentLoaded', () => {
         animate();
     }
 
-    // --- 2. Advanced 3D Tilt & Interactive Glow Effect ---
+    // --- 2. Advanced 3D Tilt & Glow (BUG FIX APPLIED HERE) ---
     const tiltCards = document.querySelectorAll('.tilt-card');
 
     tiltCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            // THE FIX: Erase the CSS delay classes immediately so hover is instant
+            card.classList.remove('delay-1', 'delay-2', 'delay-3');
+            card.style.transition = 'none'; 
+        });
+
         card.addEventListener('mousemove', (e) => {
-            // Disable tilt on mobile for better performance
             if(window.innerWidth < 768) return; 
 
-            // Calculate card position relative to viewport
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             
-            // Pass the exact mouse coordinates to CSS for the glowing orb
             card.style.setProperty('--mouse-x', `${x}px`);
             card.style.setProperty('--mouse-y', `${y}px`);
 
-            // Calculate 3D rotation based on mouse position
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
             
             const rotateX = ((y - centerY) / centerY) * -5; 
             const rotateY = ((x - centerX) / centerX) * 5;
 
-            // Apply the transformation
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
         });
 
         card.addEventListener('mouseleave', () => {
-            // Reset position and remove glow when mouse leaves
+            // Restore smooth transitions for snapping back to place and hiding glow
+            card.style.transition = 'transform 0.5s ease, box-shadow 0.3s ease, border-color 0.3s ease';
             card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
             card.style.setProperty('--mouse-x', `-1000px`);
             card.style.setProperty('--mouse-y', `-1000px`);
